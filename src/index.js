@@ -3,6 +3,14 @@ module.exports = {
   AppCanvas: require('./js/app-canvas'),
   Checkbox: require('./js/checkbox'),
   DatePicker: require('./js/date-picker/date-picker'),
+  DatePickerComponents: {
+    DatePickerDialog: require('./js/date-picker/date-picker-dialog'),
+    Calendar: require('./js/date-picker/calendar'),
+    CalendarToolbar: require('./js/date-picker/calendar-toolbar'),
+    CalendarMonth: require('./js/date-picker/calendar-month'),
+    DateDisplay: require('./js/date-picker/date-display'),
+    DayButton: require('./js/date-picker/day-button'),
+  },
   Dialog: require('./js/dialog'),
   DialogWindow: require('./js/dialog-window'),
   DropDownIcon: require('./js/drop-down-icon'),
@@ -27,6 +35,9 @@ module.exports = {
   RaisedButton: require('./js/raised-button'),
   Slider: require('./js/slider'),
   SvgIcon: require('./js/svg-icons/svg-icon'),
+  TransitionGroups: {
+    SlideIn: require('./js/transition-groups/slide-in')
+  },
   Icons: {
     NavigationMenu: require('./js/svg-icons/navigation-menu'),
     NavigationChevronLeft: require('./js/svg-icons/navigation-chevron-left'),
