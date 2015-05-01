@@ -1,10 +1,9 @@
 var React = require('react');
 var mui = require('mui');
 var DatePicker = mui.DatePicker;
-var TimePicker = mui.TimePicker;
 var ComponentDoc = require('../../component-doc.jsx');
 
-var DatePickerPage = React.createClass({
+var TimePickerPage = React.createClass({
 
   render: function() {
 
@@ -79,25 +78,17 @@ var DatePickerPage = React.createClass({
 
     return (
       <ComponentDoc
-        name="Date Picker"
+        name="Time Picker"
         code={code}
         componentInfo={componentInfo}>
 
-        <DatePicker
-          hintText="Portrait Dialog" />
-
-        <DatePicker
-          hintText="Landscape Dialog"
-          mode="landscape" />
-
         <TimePicker
-          hintText="TimePicker"/>
+          hintText="Time Picker"/>
 
       </ComponentDoc>
-
     );
   }
 
 });
 
-module.exports = DatePickerPage;
+module.exports = TimePickerPage;
