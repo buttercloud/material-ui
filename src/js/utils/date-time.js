@@ -1,4 +1,4 @@
-var DateTime = {
+module.exports = {
 
   addDays: function(d, days) {
     var newDate = this.clone(d);
@@ -107,48 +107,6 @@ var DateTime = {
     return weekArray;
   },
 
-  padTime: function (hoursOrMins) {
-    return ("00" + hoursOrMins).slice(-2);
-  },
-
-  isAM: function(dt) {
-    var hours = dt.getHours();
-    return hours < 12;
-  },
-
-  to12Hr: function(dt) {
-    dt = this.clone(dt);
-    var hours = dt.getHours();
-    if (hours > 12) {
-      hours -= 12;
-    } else if (hours == 0) {
-      hours = 12;
-    }
-    dt.setHours(hours);
-    return dt;
-  },
-
-  to24Hr: function(dt, isAM) {
-    dt = this.clone(dt);
-    var hours = dt.getHours();
-    if (!isAM) {
-      hours += 12;
-    }
-    dt.setHours(hours);
-    return dt;
-  },
-
-  roundMinutesToNearest: function(dt, nearest) {
-   dt = DateTime.clone(dt);
-   dt.setMinutes(Math.round(dt.getMinutes() / nearest) * nearest);
-   return dt;
-  },
-
-  formatTime: function(dt) {
-    dt = DateTime.clone(dt);
-    return (DateTime.padTime(DateTime.to12Hr(dt).getHours()) + ":" + DateTime.padTime(dt.getMinutes()) + (DateTime.isAM(dt) ? ' AM' : ' PM' ));
-  },
-
   format: function(date) {
     var m = date.getMonth() + 1;
     var d = date.getDate();
@@ -171,6 +129,4 @@ var DateTime = {
     return m;
   }
 
-};
-
-module.exports = DateTime;
+}

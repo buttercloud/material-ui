@@ -1,7 +1,6 @@
 var React = require('react');
 var mui = require('mui');
 var DatePicker = mui.DatePicker;
-var TimePicker = mui.TimePicker;
 var ComponentDoc = require('../../component-doc.jsx');
 
 var DatePickerPage = React.createClass({
@@ -90,11 +89,7 @@ var DatePickerPage = React.createClass({
           hintText="Landscape Dialog"
           mode="landscape" />
 
-        <TimePicker
-          hintText="TimePicker"/>
-
       </ComponentDoc>
-
     );
   }
 
